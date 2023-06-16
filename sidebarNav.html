@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="htmlcss bootstrap aside menu, vertical, sidebar nav menu CSS examples" />
+    <meta name="description" content="Bootstrap 5 sidebar navigation menu example" />
+
+    <title>Demo - Bootstrap 5 sidebar vertical menu sample. html code example </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <!-- ======= Icons used for dropdown (you can use your own) ======== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style type="text/css">
+        .sidebar li .submenu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .sidebar .nav-link {
+            font-weight: 500;
+            color: var(--bs-dark);
+        }
+
+        .sidebar .nav-link:hover {
+            color: var(--bs-primary);
+        }
+
+        .mainItem:hover {
+            background-color: #dee2e6;
+            ;
+        }
+
+        .active {
+            background-color: #f8f9fa;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelectorAll('.sidebar .nav-link').forEach(function (element) {
+
+                element.addEventListener('click', function (e) {
+
+                    let nextEl = element.nextElementSibling;
+                    let parentEl = element.parentElement;
+
+                    if (nextEl) {
+                        e.preventDefault();
+                        let mycollapse = new bootstrap.Collapse(nextEl);
+
+                        if (nextEl.classList.contains('show')) {
+                            mycollapse.hide();
+                        } else {
+                            mycollapse.show();
+                            // find other submenus with class=show
+                            var opened_submenu = parentEl.parentElement.querySelector('.submenu.show');
+                            // if it exists, then close all of them
+                            if (opened_submenu) {
+                                new bootstrap.Collapse(opened_submenu);
+                            }
+
+                        }
+                    }
+
+                });
+            })
+
+        });
+	// DOMContentLoaded  end
+    </script>
+
+
+</head>
+
+<body>
+    <div class="row position-relative">
+        <div class=" col-1 menu w-25 h-100 fs-3 text-center pt-3"><a href="#"><i class="bi bi-list"></i></a>
+        </div>
+
+        <nav class="sidebar pt-3 mb-4 border-0 d-none bg-danger position-absolute top-0"
+            style="width: 330px;height:calc( 100vh - 50px);">
+            <ul class="nav nav-tabs border-0 ps-4 ">
+                <li class="nav-item mainItem tablinks product" onclick="openTab(event, 'products')"><a class="nav-link"
+                        aria-current="page" href="#"><i class="bi bi-list me-1"></i>products</a>
+                </li>
+                <li class="nav-item mainItem tablinks ps-4 sign" onclick="openTab(event, 'sign')"><a class="nav-link"
+                        href="#"><i class="bi bi-person me-1"></i>sign in/register</a></li>
+            </ul>
+            <div class="tabcontent " id="products"
+                style="width: 330px;height:calc( 100vh - 50px); background-color: #f8f9fa;">
+                <ul class="nav flex-column" id="nav_accordion">
+                    <li class="nav-item  mt-1 mb-1 ">
+                        <a class="nav-link fw-bold  pt-2 ps-3" href="#"> best offers </a>
+                    </li>
+                    <li class="nav-item  mt-1 mb-1  ">
+                        <a class="nav-link fw-bold  pt-2 ps-3" href="#"> eCatalogue </a>
+                    </li>
+                    <li class="nav-item mt-1 mb-1 ">
+                        <a class="nav-link fw-bold  pt-2 ps-3" href="#"> Inspiration <i
+                                class="bi small bi-caret-down-fill"></i></a>
+                        <ul class="submenu collapse">
+                            <li><a class="nav-link fw-light fs-6 pt-2" href="#">Editorials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mt-1 mb-1  border-start"
+                        style="--bs-border-width:5px; --bs-border-color:#0d6efd;">
+                        <a class="nav-link fw-bold  pt-2 ps-3" href="#">Skin Care
+                            <i class="bi small bi-caret-down-fill"></i>
+                        </a>
+                        <ul class="submenu collapse ps-5">
+                            <li><a class="nav-link fw-bold fs-6 pt-2" href="#">Moisturisers<i
+                                        class="bi small bi-caret-down-fill"></i></a>
+                                <ul class="submenu collapse ps-3">
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#">Day cream </a></li>
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#">Night cream</a></li>
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#">BB & CC cream</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="nav-link fw-bold fs-6 pt-2" href="#">Serum & Treatment<i
+                                        class="bi small bi-caret-down-fill"></i>
+                                </a>
+                                <ul class="submenu collapse">
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#">Serum & Booster
+                                        </a></li>
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#">Facial oil
+                                        </a></li>
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#">Exfoliator
+                                        </a></li>
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#"> Acne & Blemish
+                                        </a></li>
+                                    <li><a class="nav-link pt-2" href="#">
+                                            Neck & Décolletage</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link fw-light fs-6 pt-3" href="#">Eye & Lip care <i
+                                        class="bi small bi-caret-down-fill"></i></a>
+                                <ul class="submenu collapse">
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#">Eye creams
+                                        </a></li>
+                                    <li><a class="nav-link fw-light fs-6 pt-2" href="#">Lip care
+                                        </a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu  mt-1 mb-1  border-start"
+                        style="--bs-border-width:5px; --bs-border-color:#E793B7;">
+                        <a class="nav-link fw-bold pt-2 ps-3 " href="#">Make up
+                            <i class="bi small bi-caret-down-fill"></i>
+                        </a>
+                        <ul class="submenu collapse">
+                            <li><a class="nav-link fw-light fs-6 pt-2" href="#">Face </a></li>
+                            <li><a class="nav-link fw-light fs-6 pt-2" href="#">Eyes </a></li>
+                            <li><a class="nav-link fw-light fs-6 pt-2" href="#">Lips </a></li>
+                            <li><a class="nav-link fw-light fs-6 pt-2" href="#">Nails </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu  mt-1 mb-1  border-start"
+                        style="--bs-border-width:5px; --bs-border-color:#B6ADA5;">
+                        <a class="nav-link fw-bold pt-2 ps-3 " href="#">
+                            Fragrance <i class="bi small bi-caret-down-fill fs-6"></i>
+                        </a>
+                        <ul class="submenu collapse">
+                            <li><a class="nav-link fw-light fs-6 pt-2" href="#">Women </a></li>
+                            <li><a class="nav-link fw-light fs-6 pt-2" href="#">Men</a></li>
+                            <li><a class="nav-link fw-light fs-6 pt-2" href="#">Brands </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mt-1 mb-1 border-start "
+                        style="--bs-border-width:5px; --bs-border-color:#2774AE;">
+                        <a class="nav-link fw-bold pt-2 ps-3" href="#">Bath & Body</a>
+                    </li>
+                    <li class="nav-item  mt-1 mb-1 border-start"
+                        style="--bs-border-width:5px; --bs-border-color:#F0C264;">
+                        <a class="nav-link fw-bold pt-2 ps-3" href="#">
+                            Hair </a>
+                    </li>
+                    <li class="nav-item mt-1 mb-1 border-start">
+                        <a class="nav-link fw-bold  pt-2 ps-3" href="#">
+                            Accessories </a>
+                    </li>
+                    <li class="nav-item mt-1 mb-1">
+                        <a class="nav-link fw-bold pt-2 ps-3 " href="#">
+                            Wellness </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class=" tabcontent border-1 border-black " id="sign"
+                style="width: 330px;height:calc( 100vh - 50px); background-color: #f8f9fa;">
+                <h2 class="mt-5 text-center">Sign in</h2>
+                <div class="m-3 p-3 text-left">
+                    <label for="userName" class="form-label">Email address or registration number</label>
+                    <input type="text" class="col-10 mt-3 rounded-2 border-1" id="userName" style="outline: none">
+                </div>
+                <div class="m-3 p-3 text-left row g-3 align-items-center">
+                    <div class="col-12">
+                        <label for="inputPassword6" class="col-form-label  d-block">Password</label>
+                    </div>
+                    <div class="row col-12 mt-3 d-flex flex-row ">
+                        <input type="password" id="inputPassword" class=" col-10 rounded-2 border-1"
+                            aria-labelledby="passwordHelpInline" style="outline: none;">
+                        <div class="pass col-1 ms-2" onclick="showPass()"><i class="bi bi-eye "></i></div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+
+    </div>
+    <script>
+
+        let selectMenu = document.querySelector("div.menu")
+        let sideNav = document.querySelector("nav.sidebar")
+        selectMenu.addEventListener("click", function () {
+            sideNav.classList.toggle("d-none")
+            sideNav.parentNode.toggle("bg-transparent")
+        })
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            if (tabName === "sign") {
+                document.querySelector("li.sign>a>i").classList.remove("bi-person");
+                document.querySelector("li.sign>a>i").classList.add("bi-person-fill");
+            }
+            else {
+                document.querySelector("li.sign>a>i").classList.remove("bi-person-fill");
+                document.querySelector("li.sign>a>i").classList.add("bi-person");
+            }
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function showPass() {
+            document.querySelector("div.pass>i").classList.toggle("bi-eye");
+            document.querySelector("div.pass>i").classList.toggle("bi-eye-slash");
+
+            var x = document.getElementById("inputPassword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+        //close out of element
+        document.addEventListener("click", function (event) {
+            debugger
+            if (!sideNav.contains(event.target) && !selectMenu.contains(event.target)) {
+
+                sideNav.classList.add("d-none")
+            }
+        })
+
+        // resize screen
+        window.addEventListener("resize", closeDivMenufullpage)
+        function closeDivMenufullpage() {
+            if (window.outerWidth < 750) {
+                document.querySelector("div.menufullpage").classList.add("hidden")
+            }
+        }
+    </script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+<!-- let selectMenu = document.querySelector("div.menu")
+selectMenu.addEventListener("click", function () {
+let MyQuery = window.matchMedia("(max-width> 576px)").matches;
+if (MyQuery == true) {
+document.querySelector("div.menufullpage").classList.toggle("active")
+document.querySelector("div.menu>a>i").classList.toggle("bi-x")
+} else {
+document.querySelector("div.testMenu").classList.toggle("active")
+}
+}) -->

@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Oriflame Sans 2.0';
+    src: url('OriflameSans20-Regular.eot');
+    src: url('OriflameSans20-Regular.eot?#iefix') format('embedded-opentype'),
+        url('OriflameSans20-Regular.woff2') format('woff2'),
+        url('OriflameSans20-Regular.woff') format('woff'),
+        url('OriflameSans20-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oriflame Sans 2.0';
+    src: url('OriflameSans20-Bold.eot');
+    src: url('OriflameSans20-Bold.eot?#iefix') format('embedded-opentype'),
+        url('OriflameSans20-Bold.woff2') format('woff2'),
+        url('OriflameSans20-Bold.woff') format('woff'),
+        url('OriflameSans20-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oriflame Sans Cond 2.0';
+    src: url('OriflameSansCond20-Bold.eot');
+    src: url('OriflameSansCond20-Bold.eot?#iefix') format('embedded-opentype'),
+        url('OriflameSansCond20-Bold.woff2') format('woff2'),
+        url('OriflameSansCond20-Bold.woff') format('woff'),
+        url('OriflameSansCond20-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
