@@ -1258,35 +1258,114 @@
                             </li>
                         </ul>
                     </div>
-
+                    <!-- login -->
                     <div class=" tabcontent border-1 border-black " id="sign"
-                        style="width: 330px;height:100vh; background-color: #f8f9fa;">
-                        <h2 class="mt-5 text-center">Sign in</h2>
-                        <div class="m-3 p-3 text-left">
-                            <label for="userName" class="form-label">Email address or registration number</label>
-                            <input type="text" class="col-10 mt-3 rounded-2 border-1" id="userName"
-                                style="outline: none">
-                        </div>
-                        <div class="m-3 p-3 text-left row g-3 align-items-center">
-                            <div class="col-12">
-                                <label for="inputPassword6" class="col-form-label  d-block">Password</label>
+                        style="top: 80px;left:0 ; width: 330px;height:100vh; background-color: #f8f9fa;">
+                        <h6 class="mt-5 text-center">Sign in</h>
+                            <div class="m-3 mb-0 p-3 text-left">
+                                <label for="userName" class="form-label" style="font-size: 12px;">Email address or
+                                    registration number</label>
+                                <input type="text" class="col-10 mt-3 rounded-2 border-1" id="userName"
+                                    style=" outline: none !important;">
                             </div>
-                            <div class="row col-12 mt-3 d-flex flex-row ">
-                                <input type="password" id="inputPassword" class=" col-10 rounded-2 border-1"
-                                    aria-labelledby="passwordHelpInline" style="outline: none;">
-                                <div class="pass col-1 ms-2" onclick="showPass()"><i class="bi bi-eye "></i></div>
+                            <div class="m-3 mt-0 text-left row g-3 d-flex flex-column align-items-center">
+                                <div class="col-12">
+                                    <label for="inputPassword6" class="col-form-label d-block"
+                                        style="font-size: 12px;">Password</label>
+                                </div>
+                                <div class="row col-10 mt-1 d-flex flex-row justify-content-center">
+                                    <input type="password" id="inputPassword" class=" col-10 rounded-2 border-1"
+                                        aria-labelledby="passwordHelpInline"
+                                        style="width: 200px;height: 22px; outline: none !important; ">
+                                    <div class="pass col-1 ms-1" onclick="showPass()"><i class="bi bi-eye "></i></div>
+                                </div>
+                            </div>
+                            <div class="row d-flex  justify-content-center"><button type="button"
+                                    class="btn btn-success text-uppercase mt-3"
+                                    style="width: 220px;height: 22px; --bs-btn-bg:#68bb93;font-size: 14px;">sign
+                                    in</button>
+                                <button type="button" class="btn btn-link mt-2 fw-bold"
+                                    style="font-size: 10px;--bs-btn-hover-color:#3b7d5d;--bs-btn-color:#353535; ">
+                                    Forget password? </button>
+                            </div>
+                            <div class="row mt-3 d-flex align-middle justify-content-center">
 
+                                <button type="button" class="btn btn-outline-secondary ps-1 rounded-2 mt-3"
+                                    style="width: 220px; font-size: 12px;">
+                                    <img src="./images/icon/facebook-5221.svg" alt="" class="me-3"
+                                        style="height: 20px;width: 20px;">continue with facebook</button>
+                                <h5 class="mt-3 mb-3">Register</h5>
                             </div>
-                        </div>
+                            <div>
+                                <h6 class="bg-body-secondary mt-1 mb-1 p-2 fw-bold" style="font-size: 12px;">vip
+                                    customer</h6>
+                                <h6 class="bg-body-secondary mt-1 mb-1 p-2 fw-bold" style="font-size: 12px;">brand
+                                    partner</h6>
+                                <a href="" style="font-size: 12px;color:#353535; ">I don't know
+                                    yet</a>
+                            </div>
+
+
                     </div>
 
-
+                    <!-- end login -->
                 </nav>
                 <!-- container //  -->
 
 
-                <div class=" col-lg-1 w-25 h-100 fs-3 text-center pt-3"><a href="#"><i
-                            class="bi bi-person d-none d-lg-block "></i></a>
+                <div class="loginDiv col-lg-1 w-25 h-100 fs-3 text-center pt-3"><a href="#"><i
+                            class="bi bi-person d-none d-lg-block"></i></a>
+                    <!-- login -->
+                    <div class="firstLoginDiv border-1 border-black position-absolute z-1 d-none" id="sign"
+                        style="top: 80px;left:0 ; width: 330px;height:100vh; background-color: #f8f9fa;">
+                        <h6 class="mt-5 text-center">Sign in</h>
+                            <div class="m-3 mb-0 p-3 text-left">
+                                <label for="userName" class="form-label" style="font-size: 12px;">Email address or
+                                    registration number</label>
+                                <input type="text" class="col-10 mt-3 rounded-2 border-1" id="userName"
+                                    style=" outline: none !important;">
+                            </div>
+                            <div class="m-3 mt-0 text-left row g-3 d-flex flex-column align-items-center">
+                                <div class="col-12">
+                                    <label for="inputPassword6" class="col-form-label d-block"
+                                        style="font-size: 12px;">Password</label>
+                                </div>
+                                <div class="row col-10 mt-1 d-flex flex-row justify-content-center">
+                                    <input type="password" id="inputPassword" class=" col-10 rounded-2 border-1"
+                                        aria-labelledby="passwordHelpInline"
+                                        style="width: 200px;height: 22px; outline: none !important; ">
+                                    <div class="pass col-1 ms-1" onclick="showPass()"><i class="bi bi-eye "></i></div>
+                                </div>
+                            </div>
+                            <div class="row d-flex  justify-content-center"><button type="button"
+                                    class="btn btn-success text-uppercase mt-3"
+                                    style="width: 220px;height: 22px; --bs-btn-bg:#68bb93;font-size: 14px;">sign
+                                    in</button>
+                                <button type="button" class="btn btn-link mt-2 fw-bold"
+                                    style="font-size: 10px;--bs-btn-hover-color:#3b7d5d;--bs-btn-color:#353535; ">
+                                    Forget password? </button>
+                            </div>
+                            <div class="row mt-3 d-flex align-middle justify-content-center">
+
+                                <button type="button" class="btn btn-outline-secondary ps-1 rounded-2 mt-3"
+                                    style="width: 220px; font-size: 12px;">
+                                    <img src="./images/icon/facebook-5221.svg" alt="" class="me-3"
+                                        style="height: 20px;width: 20px;">continue with facebook</button>
+                                <h5 class="mt-3 mb-3">Register</h5>
+                            </div>
+                            <div>
+                                <h6 class="bg-body-secondary mt-1 mb-1 p-2 fw-bold" style="font-size: 12px;">vip
+                                    customer</h6>
+                                <h6 class="bg-body-secondary mt-1 mb-1 p-2 fw-bold" style="font-size: 12px;">brand
+                                    partner</h6>
+                                <a href="" style="font-size: 12px;color:#353535; ">I don't know
+                                    yet</a>
+                            </div>
+
+
+                    </div>
+
+                    <!-- end login -->
                     <div class="searchBtn"><a href="#"><i class="bi bi-search d-block d-lg-none fs-5"></i></a></div>
                     <div class="searchDiv position-absolute d-none" style="top:80px; left: 0; width: 100vw;">
                         <div class=" pt-2 pb-2 bg-white z-1 position-absolute border-top"
@@ -2371,6 +2450,9 @@
         let selectMenu = document.querySelector("div.menu")
         let fullMenu = document.querySelector("div.menufullpage")
         let sideNav = document.querySelector("nav.sidebar")
+        let srchDiv = document.querySelector("div.searchDiv")
+        let login = document.querySelector("div.loginDiv>a")
+        let fLogDiv = document.querySelector(" div.firstLoginDiv")
         selectMenu.addEventListener("click", function () {
             if (window.outerWidth >= 992) {
                 fullMenu.classList.toggle("d-none")
@@ -2381,6 +2463,11 @@
                 body.classList.add("opacity-100")
                 openTab(event, 'product')
             }
+        })
+
+        login.addEventListener('click', function () {
+            fLogDiv.classList.remove("d-none")
+            fLogDiv.classList.add("d-block")
         })
 
         function openTab(evt, tabName) {
@@ -2422,6 +2509,12 @@
             if (!sideNav.contains(event.target) && !selectMenu.contains(event.target)) {
                 sideNav.classList.add("d-none")
             }
+            if (!srchDiv.contains(event.target) && !srchBtn.contains(event.target)) {
+                srchDiv.classList.add("d-none")
+            }
+            if (!fLogDiv.contains(event.target) && !login.contains(event.target)) {
+                fLogDiv.classList.add("d-none")
+            }
         })
 
         // resize screen
@@ -2444,8 +2537,7 @@
         })
         let srchBtn = document.querySelector("div.searchBtn")
         srchBtn.addEventListener('click', function () {
-            let tt = document.querySelector("div.searchDiv")
-            tt.classList.toggle("d-none")
+            srchDiv.classList.toggle("d-none")
         })
         let closeSrchBtn = document.getElementById("closeSearchBtn")
         closeSrchBtn.addEventListener('click', function () {
