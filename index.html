@@ -58,7 +58,9 @@
         <!-- start left top page -->
         <div class="start row container-fluid bg-white position-fixed z-3" style="height: 80px; width: 100vw;">
             <div class="row col-3">
-                <div class=" col-1 menu w-25 h-100 fs-3 text-center pt-3"><a href="#"><i class="bi bi-list"></i></a>
+                <div class=" col-1 menu w-25 h-100 fs-3 text-center pt-3">
+                    <a href="#"><i class="bi bi-list d-block"></i></a>
+                    <a href="#"><i class="bi bi-x d-none"></i></a>
                 </div>
 
                 <div class="menufullpage row w-100 bg-white position-fixed z-3 d-none" style="top:80px; left:0;">
@@ -2335,7 +2337,7 @@
         </div>
         <!-- end subscribe -->
         <!-- start info -->
-        <div class="row d-flex flex-wrap flex-row justify-content-around pt-3 pb-5" style="background-color: #F5F5F5;">
+        <div class="row d-flex flex-wrap flex-row justify-content-around pt-3 pb-5" style="background-color: #F5F5F5; ">
             <!-- <div class="col-1"></div> -->
             <div class=" col-md-2 col-3 mt-3">
                 <ul>
@@ -2453,10 +2455,12 @@
         let srchDiv = document.querySelector("div.searchDiv")
         let login = document.querySelector("div.loginDiv>a")
         let fLogDiv = document.querySelector(" div.firstLoginDiv")
+
         selectMenu.addEventListener("click", function () {
             if (window.outerWidth >= 992) {
                 fullMenu.classList.toggle("d-none")
-                body.classList.remove("bg-transparent")
+                document.querySelector("div.menu>a>i.bi-list").classList.toggle("d-none")
+                document.querySelector("div.menu>a>i.bi-x").classList.toggle("d-none")
             }
             else {
                 sideNav.classList.toggle("d-none")
